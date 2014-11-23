@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Reloading::Application.config.secret_key_base = '5a70be62c0d9fe3d2d8c791c04761a33dd08edf6ac5b53b8e89a1b1b32d2dd1e5b52effdf7708eb3e85cda67890d6e66707ee70568b90da463f3457b30b3e278'
+Qabeat::Application.config.secret_key_base = '5a70be62c0d9fe3d2d8c791c04761a33dd08edf6ac5b53b8e89a1b1b32d2dd1e5b52effdf7708eb3e85cda67890d6e66707ee70568b90da463f3457b30b3e278'
