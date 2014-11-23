@@ -1,4 +1,4 @@
-Qabeat::Application.routes.draw do
+Reloading::Application.routes.draw do
   get "load_performance/loadperformance"
   get "websites/websites"
   get "qa_evangelist/qaevangelist"
