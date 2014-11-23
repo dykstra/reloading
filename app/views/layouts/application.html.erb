@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QAT OnDemand</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap font awesome -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<!-- include javascript, jQuery FIRST -->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+  <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Google Analytics -->
+
+  <script>
+  
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50124610-1', 'qabeat.com');
+  ga('send', 'pageview');
+
+ </script>
+</head>
+<body>
+<header class="navbar navbar-fixed-top">
+ <nav class="navbar navbar-default navbar-style" role="navigation"> 
+
+<!-- Transparent to solid color navbar -->
+
+    <div id="navbar-scroll-start"></div>
+      <script type="text/javascript">
+      var mainbottom = $('#navbar-scroll-start').offset().top + $('#navbar-scroll-start').height();
+
+      // On scroll
+      $(window).on('scroll',function(){
+
+          // Round to reduce a little workload
+          stop = Math.round($(window).scrollTop());
+          if (stop > mainbottom) {
+              $('.navbar-style').addClass('initial-scroll');
+          } else {
+              $('.navbar-style').removeClass('initial-scroll');
+         }
+      });
+    </script>
+  
+  <div class="container-fluid" width="100%">
+  
+   <!-- Brand and toggle get grouped for better mobile display -->
+  
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+       <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <%= link_to image_tag("brand-grey.png"), '/', class: "brand-logo" %>
+          <div class="contact-number">
+            813-486-7071
+        </div> <!--contact-number close-->
+    </div>
+   
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    
+  <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">  
+         <li><a href="/qat_on_demand/qatondemand#">QAT On Demand</a></li>    
+         <li><a href="/qa_consulting/qaconsulting#">QA Consulting</a></li> 
+         <li><a href="/qa_evangelist/qaevangelist#">Training & Culture</a></li>
+         <li><a href="/automation/automation#">Automation</a></li>
+         <li><a href="/security/security#">Security</a></li>
+         <li><a href="/websites/websites#">Need a website?</a></li>
+          <!--<li class="navbar-style"><a href="/blog_page/blog#">Blog</a></li>-->
+       </li>
+      </ul>
+     </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+   </nav>
+ </header>
+<%= yield %>
+
+<!--Start of the footer-->
+<!--Home button; image link-->
+
+<div id="footer">
+  <ul id="footer_menu">
+    <li class="homeButton"><a href="/"><i class="fa fa-home"></i></a></li>
+
+<!--Disabling this for now; footer popup to the left of Owner CEO
+    <!--QA Culture button
+
+    <li><a href="#">QA Culture</a>
+      <div class="one_column_layout">
+        <div class="col_1">
+          <a class="headerLinks">QA Evolve</a><br>
+          <a class="listLinks">Placeholder </a><br>
+          <a class="headerLinks">QA is in everything</a><br>
+          <!--<a class="listLinks" style="font-weight:bold;color:white;">Test</a><br>
+          <a class="listLinks">Business</a>
+          <a class="listLinks">Personal</a>
+          <a class="listLinks">SDLC</a>
+        </div>
+      </div>
+    </li>
+-->
+
+    <!--Owner CEO footer popup-->
+
+    <li style="color:#99cc00;"><a href="#">Owner & CEO</a>
+      <div class="three_column_layout">
+
+<!--Disabling the section above the Owner CEO section
+
+        <div class="col_3">
+          <h2 style="color:#99cc00;">History</h2>
+        </div>
+
+          <div class="clear"></div>
+
+        <div class="col_1">
+          <p>Placeholder 1</p>
+        </div>
+        <div class="col_1">
+          <p>Placeholder 2</p>
+        </div>
+        <div class="col_1">
+          <p>Placeholder 3</p>
+        </div>
+
+          <div class="clear"></div>
+
+        <div class="col_1">
+          <!--<p class="black-box">Placeholder 4</p>
+          <p>Placeholder 4</p>
+        </div>
+        <div class="col_1">
+          <p>Placeholder 5</p>
+        </div>
+        <div class="col_1">
+          <p>Placeholder 6</p>
+        </div>
+
+
+      -->
+
+          <div class="clear"></div>
+
+        <div class="col_3">
+          <h2 style="color:#99cc00;">QA Ninja</h2>
+        </div>
+
+          <div class="clear"></div>
+
+        <div class="col_3">
+          <p>
+            <div class="img-left whiteborder"> <%=image_tag "aboutme-pic.png" %> 
+            </div>
+            <div  class="owner-text" style="display:inline;color:white;">
+              Doug Dykstra - (813)-486-7071 <br>
+              <u>Quality:</u> Character with respect to fineness or grade of excellence. <br>
+              <u>Assurance:</u> A positive declaration intended to give confidence. <br>
+              <u>Analyst:</u> A person who analyzes and designs or who is skilled in analysis. <br>
+              <u>Engineer:</u> A logical thinker or problem solver; an architect, developer of software. <br>
+           </div> 
+          </p>
+        </div>
+      </div>
+
+      <!--Need to create 2 column layout-->
+
+    </li>
+
+<!--Disabling this for now; footer popup to the right of Owner CEO popup
+    <!--Services button
+    <li>
+      <a href="#">Placeholder</a>
+      <ul class="dropup">
+        <li><a href="#">Section 1</a></li>
+        <li><a href="#">Section 2</a></li>
+        <li><a href="#">Section 3</a></li>
+        <li><a href="#">Section 4</a></li>
+      </ul>
+    </li>
+-->
+
+    <!--Logout button-->
+    
+    <li class="right" style="color:#99cc00;">QAT = CAT</li>
+</ul>
+
+  <!--Notification inluding popup on the last notification-->
+
+<ul id="notifications">
+  <li><a href="mailto:qatondemand@gmail.com?Subject=QAT%20information%20request" target="_top" class="notificationIcons"><i class="fa fa-envelope-o"></i></li>
+  <!--<li><a href="https://www.facebook.com/qatondemand" target="_blank" class="notificationIcons"><%=image_tag "" %></li>-->
+  <li><a href="https://www.facebook.com/qatondemand" target="_blank" class="notificationIcons"><i class="fa fa-facebook-square"></i></li>
+  <li><a href="http://twitter.com/qatondemand" target="_blank" class="notificationIcons"><i class="fa fa-twitter"></i>
+      <span>
+        <!--<img src="#" style="float:left; width:24px; margin-right:5px;" />-->
+        <i class="fa fa-facebook-square"></i><style="float:left; width:24px; margin-right:5px;" />
+        <div style="display:inline; color: white">@Facebook liked your post : There will always be bugs, get it out the door early and often</div> 
+        <hr style="border:none; border-bottom:1px solid #777777;" />
+
+        <i class="fa fa-twitter"></i><style="float:left; width:24px; margin-right:5px;" />
+        <div style="display:inline; color: white">@Twitter RT your tweet : Software is never perfect, only done. Release it!</div> 
+        <hr style="border:none; border-bottom:1px solid #777777;" />
+
+        <i class="fa fa-google-plus"></i><style="float:left; width:24px; margin-right:5px;" />
+        <div style="display:inline; color: #white">@Google mentioned you : Requirements need quality too</div> 
+        
+      </span>
+    </a>
+  </li>
+  </ul>
+ </div>
+<!--footer end-->
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+.qaevangelist-nav-margin{
+   padding-top: 28px;
+}
+
+.qaevangelist-h1-text {
+    font-size: 3em;
+    letter-spacing: -2px;
+    text-align: left;
+    margin-left: 10px;
+    color: #000000;
+    font-family: copperplate;
+    text-shadow: 0.1em 0.1em 0.2em #888888
+}
+
+.qaevangelist-h2-text {
+    font-size: 1.3em;
+    line-height: 1.7em;
+    text-align: none;
+    font-family: copperplate;
+}
+
+.qaevangelist-plan-shadow{
+    box-shadow: 0px 0px 35px #888888;
+}
+
+.qaevangelist-banner-h2-text-border{
+	border:2px solid #F0F0F0;
+	border-radius: 4px;
+	box-shadow: 0px 0px 15px #888888;
+	background-color:rgba(205,0,0,0.2);
+	padding-left: 17px;
+}
+
+.qaevangelist-home-h2-text-border{
+	border:2px solid #F0F0F0;
+	border-radius: 4px;
+	box-shadow: 0px 0px 15px #888888;
+	background-color: #FFFFCC;
+	padding-left: 17px;
+	margin-right: 135px;
+}

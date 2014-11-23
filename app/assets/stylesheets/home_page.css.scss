@@ -1,0 +1,684 @@
+// Place all the styles related to the HomePage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+html, body {
+    background-color:#ffffff;
+}
+
+/* Pricing panels on home page */
+
+.panel-default {
+   background-color: #E4E4DF
+}
+
+.panel-default > .panel-heading {
+    color: #99cc00;
+    background-color: whitesmoke;
+    border-color: #99cc00;
+}
+
+/* Custom panel postion and style */
+.custom-panel {
+    position: relative;
+    left: 390px;
+  }
+
+/* Bootstrap top nav bar; overwrite default */
+
+.home-nav-margin{
+   padding-top: 28px;
+}
+
+/* Sets navbar to transparent and changes to solid color on scroll */
+
+.navbar-style {
+    background: rgba(255,255,255,0.4);
+    font-family: copperplate;
+    font-size: 14px;
+    /*font-weight: bold; color: #25CDD9;*/
+    border-radius: 0 !important;
+    border: 0 !important;
+    box-shadow: 0px 1px 1px #888888;
+}
+
+/* Changes navbar color to white on scroll */
+
+.navbar-style.initial-scroll {
+    background-color:#ffffff;
+    transition: all .5s ease;
+}
+
+#navbar-scroll-start {
+    height:0px;
+}
+
+.navbar-inner {
+    position:fixed;
+    top:0;
+}
+
+/* Navbar font color */
+
+.navbar-default .navbar-nav > li > a {
+    color: #4C544D; /*old color:4C544D;*/
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: #4BD15C; /*old color:99cc00;*/
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #25CDD9;
+    white-space: nowrap;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #25CDD9;
+    color: #FFFFFF;
+}
+
+/*Contact number in navbar*/
+
+.contact-number {
+    color: #4C544D;
+    position: absolute;
+    padding-top: 0px;
+    font-size: 40px;
+    padding-left: 110px;
+    font-family: serif;
+}
+
+/* Bootstrap font awesome */
+
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(170, 231, 61);
+    font-size: 1.55em;
+    padding-top: 5px;
+    box-shadow: 0px;
+}
+
+/* Bootstrap buttons */
+
+.btn-success {
+    color: white;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding-left: 139px;
+    padding-right: 148px;
+    width: 100%;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    padding-left: 139px;
+    padding-right: 148px;
+    width: 100%;
+}
+
+.btn-info {
+    color: white;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    padding-left: 139px;
+    padding-right: 148px;
+    width: 100%;
+}
+
+.btn-warning {
+    color: white;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    padding-left: 139px;
+    padding-right: 148px;
+    width: 100%;
+}
+
+/* Bootstrap carousel */
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 600px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 460px;
+    z-index: 10;
+    padding-top: -22px;
+    color: white;
+    text-align: center;
+    background-color:rgba(35, 37, 36, 0.6);
+}
+
+/* Text and banner over the 3 images in parallax */
+
+.home-text-bg{
+    border-radius: 1px;
+    position: relative;
+    top: 0px;
+    background-color:rgba(35, 37, 36, 0.6);
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.home-text-bg2{
+    border-radius: 1px;
+    background-color:rgba(35, 37, 36, 0.6);
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: -50px;
+}
+
+.home-text-bg3{
+    border-radius: 1px;
+    background-color:rgba(35, 37, 36, 0.6);
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: -50px;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0px;
+    text-indent: -999px;
+    border: 1px solid white;
+    border-radius: 0px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color:#ccee00;
+}
+
+/* Adds a fade effect to the carousel instead on a slide 
+.carousel .item {-webkit-transition: opacity 5s; -moz-transition: opacity 5s; -ms-transition: opacity 5s; -o-transition: opacity 5s; transition: opacity 5s;}
+.carousel .active.left {left:0;opacity:0;z-index:2;}
+.carousel .next {left:0;opacity:1;z-index:1;}
+
+
+/* Text and/or background positioning on top of full width banners */
+
+.text-bg-over-video {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 470px;
+    z-index: 10;
+    padding-top: -22px;
+    color: white;
+    /*background-color:rgba(35, 37, 36, 0.6);*/
+}
+
+/* Bootstrap parallax srolling */
+
+.divider {
+    height:30px;
+}
+
+section {
+    height:600px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+.bg-1 {
+  background: asset-url('green-tie.jpg') no-repeat center center fixed;
+    color:#fff;
+    background-size:cover;
+}
+  
+.bg-2 {
+  background: asset-url('bw-diner-bg.png') no-repeat top center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-3 {
+
+  background: asset-url('lighthouse.jpg') no-repeat bottom center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+
+/* Live coding animation */ 
+
+.video-texture {
+    height: 3000px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    z-index: 10;
+ }  
+
+.mobile-video-image {
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   -moz-background-size: cover;
+    -webkit-background-size: cover;
+   -o-background-size: cover;
+}
+
+.swiper-slide .video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide .video-wrap video {
+    top: 0px;
+    position: relative;
+    -webkit-backface-visibility:hidden!important;
+}
+
+.swiper-slide .content h2 {
+font-family: Lovelo,sans-serif;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+/* Slide in 3d image animation; currently not used */
+
+#revealAnim .images-container img {
+    -webkit-transition: -webkit-transform .6s .9s;
+    -moz-transition: -moz-transform .6s .9s;
+    transition: transform .6s .9s;
+}
+#revealAnim .images-container .back { z-index:2;
+    -webkit-transform:translate3d(-40%, 0, 0);
+       -moz-transform:translate3d(-40%, 0, 0);
+            transform:translate3d(-40%, 0, 0);
+}
+#revealAnim .images-container .front {
+    -webkit-transform:translate3d(61.6%, 0, 0);
+       -moz-transform:translate3d(61.6%, 0, 0);
+            transform:translate3d(61.6%, 0, 0);
+}
+#revealAnim .images-container .side {
+    -webkit-transform:translate3d(-338%, 0, 0);
+       -moz-transform:translate3d(-338%, 0, 0);
+            transform:translate3d(-338%, 0, 0);
+}
+.viewing-page-2 #revealAnim .images-container img {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -moz-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+}
+
+/* 3d css webkits */
+
+.div-3d
+{
+-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+transition: width 2s;
+}
+
+.div-3d:hover
+{
+width:300px;
+}
+
+/* Responsive Structure */
+
+#r-iphone{
+  
+}
+
+@media (max-width:500px) {
+    #r-small {
+    background-color: #777777;
+  }
+}
+
+/* universal */
+
+.center {
+    text-align: center;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: 2.3em;
+    letter-spacing: -2px;
+    /* text-align: center; */
+    margin-left: 10px;
+    color: #99cc00;
+    font-family: geneva;
+    /*text-shadow: 0.1em 0.1em 0.2em #888888*/
+}
+
+h2 {
+    font-size: 1.3em;
+    line-height: 1.7em;
+    text-align: none;
+    color: #4C544D;
+    font-family: geneva;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    color: white;
+
+}
+
+/* Font for parallax smaller text */
+
+.lead {
+    font-size: 21px;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+/* headers, banners, and images */
+
+.brand-logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #909090;
+    letter-spacing: -1px;
+    padding-top: 5px;
+    font-weight: none;
+    line-height: -1;
+
+      img {
+        max-width: 100px;
+        max-height: 40px;
+      }
+}
+
+.brand-logo:hover {
+    color: #F0F0F0;
+    text-decoration: none;
+}
+
+.banner-home {
+  padding-top: 22px;
+
+    img {
+      width: 100%;
+  }
+}
+
+/* asset-url('qabeat-home-banner.jpg') no-repeat center -400px; */
+/* background-size: cover; */
+/* margin-bottom: 75px; */
+
+.banner-content-top{
+    position: absolute;
+    z-index: 100%;
+    text-align: left;
+    left: 420px;
+    top: 115px;
+    /*text-shadow: 0.1em 0.1em 0.2em black;*/
+}
+
+.banner-content-bottom{
+    position: absolute;
+    z-index: 100%;
+    text-align: left;
+    left: 606px;
+    top: 257px;
+    color: rgb(224, 234, 238);
+    text-shadow: 0.1em 0.1em 0.2em black;
+    margin-right: 54px;
+    font-size: xx-large;
+}
+
+/* Parallax devices' image */
+
+.devices-parallax-desktop {
+    position: absolute;
+    top: 355px;
+    left: 380px;
+}
+
+.devices-parallax-laptop {
+    position: absolute;
+    top: 444px;
+    left: 294px;
+ }
+
+ .devices-parallax-mobile {
+    position: absolute;
+    top: 482px;
+    left: 244px;
+ }
+
+  .devices-parallax-mg {
+    position: absolute;
+    top: 504px;
+    left: 600px;
+ }
+
+/* Border around text */
+
+.home-h2-text-border{
+    border:1px solid #F0F0F0;
+    border-radius: 2px;
+    /*box-shadow: 0px 0px 15px #888888;*/
+    background-color: #113851;
+    padding-left: 17px;
+    margin-right: 700px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+
+}
+
+/* Background header behind pricing options */
+
+.pricing-banner {
+    padding: 4em;
+    background: #113851;
+    margin-bottom: 100px;
+    margin-top: 60px;
+    background-color:rgba(51, 66, 243, 0.2);
+    padding-top: 60px;
+}
+
+/* Payment plans; container box for payment plans */
+
+.marketing-item-banner {
+    padding: .25em 10%;
+    margin-top: 1;
+    background: #F0F0F0;
+    border:1px solid #F0F0F0;
+}
+
+.marketing-banner-h2-text-border{
+    border:1px solid #F0F0F0;
+    border-radius: 0px;
+    /*box-shadow: 0px 0px 15px #888888;*/
+    background-color:rgba(51, 66, 243, 0.2);
+    padding-left: 17px;
+}
+
+/* Package marketing borders on each individual package content */
+
+.iron-marketing-package-details-border {
+    border:1px solid #F0F0F0;
+    border-color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 120px;
+    margin-top: 36px;
+}
+
+.gold-marketing-package-details-border {
+    border:1px solid #F0F0F0;
+    border-color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    margin-top: 35px;
+}
+
+.diamond-marketing-package-details-border {
+    border:1px solid #F0F0F0;
+    border-color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 43px;
+    margin-top: 35px;
+}
+
+.custom-marketing-package-details-border {
+    border:1px solid #F0F0F0;
+    border-color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 120px;
+    margin-top: 36px;
+}
+
+.marketing-content{
+    font-size: 20px;
+}
+
+.marketing-box-shadow{
+    box-shadow: 0px 0px 15px #888888;
+}
+
+.marketing-plan-shadow{
+    box-shadow: 0px 0px 35px #888888;
+}
+
+/* Bootstrap grid layout for package plans */
+
+.marketing-plan {
+    height:386px;
+    width:300px;
+    border:1px solid #F0F0F0;
+    border-radius: 0px;
+
+}
+
+.iron-plan{
+    border:1px solid #F0F0F0;
+    background-color: #BFF6FA
+}
+
+.gold-plan {
+    border:1px solid #F0F0F0;
+    background-color: #BFF6FA;
+}
+
+.diamond-plan {
+    border:1px solid #F0F0F0;
+    background-color: #BFF6FA;
+}
+
+.custom-plan {
+    border:1px solid #F0F0F0;
+    background-color: #CC6666;
+    margin-left: 390px;
+    margin-top: 30px;
+}
+
+/* Best value ribbon */
+
+.ribbon {
+     font-size: 11px;
+     width: 144px;
+     height: 27px;   
+     background: #CC3333;
+     color: white;
+     position: relative;
+     border-radius: 4px;
+     text-align: center;
+     padding: .60em 2em; 
+     top: -62px;
+     right: -182px; 
+     z-index: 1;
+}
+
+.ribbon:before, .ribbon:after {
+     content: "";
+     position: absolute;
+     display: block;
+     bottom: -1em;
+     border: 1.2em solid #CC3333;
+     z-index: -1;
+     border-radius: 3px;
+}
+
+.ribbon:before {
+     left: -2em;
+     border-right-width: 1.5em;
+     border-left-color: transparent;
+}
+
+.ribbon:after {
+     right: -2em;
+     border-left-width: 1.5em;
+     border-right-color: transparent;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+     content: "";
+     position: absolute;
+     display: block;
+     border-style: solid;
+     border-color: #804f7c transparent transparent transparent;
+     bottom: -1em;
+}
+
+.ribbon .ribbon-content:before {
+     left: 10;
+     border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+     right: 0;
+     border-width: 1em 1em 0 0;
+}
+
+.ribbon{
+    -ms-transform:rotate(30deg); 
+    -webkit-transform:rotate(30deg); 
+    transform:rotate(30deg); 
+}
+

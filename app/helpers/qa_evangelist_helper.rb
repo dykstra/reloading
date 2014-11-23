@@ -1,0 +1,2 @@
+module QaEvangelistHelper
+end
