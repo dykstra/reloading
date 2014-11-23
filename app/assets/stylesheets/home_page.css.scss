@@ -85,14 +85,16 @@ html, body {
     color: #FFFFFF;
 }
 
-/*Contact number in navbar*/
+/*Top, left logo/text in navbar*/
 
-.contact-number {
+.top-logo {
     color: #4C544D;
     position: absolute;
     padding-top: 0px;
-    font-size: 40px;
+    font-size: 30px;
+    /*
     padding-left: 110px;
+    */
     font-family: serif;
 }
 
@@ -245,20 +247,20 @@ section {
 }
 
 .bg-1 {
-  background: asset-url('green-tie.jpg') no-repeat center center fixed;
+  background: asset-url('de50ae.JPG') no-repeat center center fixed;
     color:#fff;
     background-size:cover;
 }
   
 .bg-2 {
-  background: asset-url('bw-diner-bg.png') no-repeat top center fixed;
+  background: asset-url('ar15-updated.JPG') no-repeat top center fixed;
     color:#fff;
     background-size:cover;
 }
 
 .bg-3 {
 
-  background: asset-url('lighthouse.jpg') no-repeat bottom center fixed;
+  background: asset-url('ar15-case.JPG') no-repeat bottom center fixed;
     color:#fff;
     background-size:cover;
 }
