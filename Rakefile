@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Reloading::Application.load_tasks
+Qabeat::Application.load_tasks
