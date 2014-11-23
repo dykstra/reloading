@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.1-p76'
 
 gem 'rails', '4.0.4'
 gem 'bootstrap-sass', '3.1.1.0'
@@ -28,3 +28,8 @@ group :doc do
   gem 'sdoc', '0.4.0', require: false
 end
 
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+
+end
